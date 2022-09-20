@@ -5,6 +5,7 @@
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
    <style>
      h4 {
        font-style: italic;
@@ -16,18 +17,28 @@
        text-decoration: underline
        }
      }
+     
     
    </style>
  </head>
  <body>
-   <div class="container">
+   <div class="container" class="dropdown .btn">
    <h1><center><img src="https://shree-jewellers.nilmali.repl.co/static/banner.jpeg" height='90'></center></h1>
    <h4 ><center>SHREE JEWELLERS</center></h4>
  <div class="text-center mt-4 mb-2">
-    <a href="https://shree-jewellers.nilmali.repl.co/"<button type="button" class="btn btn-secondary btn-sm" style="font-style: italic;">About Us</button></a>
-   <a href="https://shree-jewellers.nilmali.repl.co/static/gallery.html"<button type="button" class="btn btn-secondary btn-sm" style="font-style: italic;">Gallery</button></a>
-   <button type="button" class="btn btn-secondary btn-sm" style="font-style: italic;">Location</button>
-   <button type="button" class="btn btn-secondary btn-sm" style="font-style: italic;">Contact Us</button></div>  
+    <a href="https://shree-jewellers.nilmali.repl.co/"><button type="button" class="btn btn-secondary btn-sm" style="font-style: italic;">About Us</button></a>
+ 
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true" style="height:32px; font-style:italic;">
+    Gallery
+  </button>
+   <ul class="dropdown-menu dropdown-menu-dark" style="Font-style:italic;">
+    <li><a class="dropdown-item" href="https://shree-jewellers.nilmali.repl.co/static/gallery.html">Rings</a></li>
+    <li><a class="dropdown-item" href="https://shree-jewellers.nilmali.repl.co/static/earrings.html">Ear Rings</a></li>
+    <li><a class="dropdown-item" href="#">Tops</a></li>
+  </ul>
+   <!--<a href="https://shree-jewellers.nilmali.repl.co/static/gallery.html"<button type="button" class="btn btn-secondary btn-sm" style="font-style: italic;">Gallery</button></a>-->
+   <a href="https://shree-jewellers.nilmali.repl.co/static/location.html"><button type="button" class="btn btn-secondary btn-sm" style="font-style: italic;">Location</button></a>
+   <a href="https://shree-jewellers.nilmali.repl.co/static/contactUs.html"><button type="button" class="btn btn-secondary btn-sm" style="font-style: italic;">Contact Us</button></div></a>
    <hr>
    <h3>ABOUT US</h3>
    <p class="lead" style="font-family: Calisto MT;">
@@ -48,6 +59,7 @@
 We have always believed in fair and transparent business. We have believed that the customer should be understood so well that we know his needs much before he understands them himself. We have believed that an enlightened customer is the best customer. These are the simple principles that have helped us reach where we are today.</p>
 </p>  
      {% include 'footer.html' %}
+
 </div>
  </body>
 </html>
